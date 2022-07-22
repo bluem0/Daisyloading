@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+.none{
+    display: none;
+}
+#flower{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.flower{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.flowerCore{
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+.petal{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 0 100% 0 100%;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 150px white;
+    background-color: white;
+    transform-origin: -10px -10px;
+    transform: rotate(0deg);
+    animation: petalShow 1s forwards;
+}
+@keyframes petalShow{
+    0%{
+        width: 0px;height: 0px;
+    }
+    100%{
+        width: 70px;height: 70px;
+    }
+}
+.loadText{
+    position: absolute;
+    top: 130%;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
